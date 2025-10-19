@@ -59,7 +59,7 @@ export class HistamineDB extends Dexie {
   pending_symptoms!: Table<PendingSymptom>;
   
   // App state
-  app_state!: Table<{ key: string; value: any; updated_at: Date }>;
+  app_state!: Table<{ key: string; value: unknown; updated_at: Date }>;
 
   constructor() {
     super('HistamineDB');

@@ -83,7 +83,6 @@ export function calculateToleranceTrend(toleranceHistory: number[]): 'improving'
   if (toleranceHistory.length < 2) return 'stable';
   
   const recent = toleranceHistory.slice(-7); // Last 7 days
-  const average = recent.reduce((sum, val) => sum + val, 0) / recent.length;
   const firstHalf = recent.slice(0, Math.floor(recent.length / 2));
   const secondHalf = recent.slice(Math.floor(recent.length / 2));
   
